@@ -175,7 +175,7 @@ export default function Home() {
               <span className="relative inline-flex h-full w-full rounded-full bg-gradient-to-r from-pink-500 to-purple-500"></span>
             </div>
             <span className="bg-gradient-to-r from-purple-700 to-pink-600 bg-clip-text text-xs sm:text-sm font-bold tracking-wide text-transparent">
-              Actively Raising Seed Round
+              We are actively in early stage
             </span>
           </div>
 
