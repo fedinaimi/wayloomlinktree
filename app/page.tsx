@@ -20,7 +20,7 @@ export default function Home() {
   // Key metrics - investor-ready stats
   const metrics = [
     { value: "7 min", label: "Screening Time", sublabel: "Per assessment" },
-    { value: "$31B", label: "USA Market", sublabel: "By 2030" },
+    { value: "$31B", label: "Large TAM", sublabel: "Global market by 2030" },
     { value: "2nd Phase", label: "Development", sublabel: "MVP Ready" },
   ];
 
@@ -128,29 +128,29 @@ export default function Home() {
       </div>
 
       {/* Main content */}
-      <main className="relative mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
+      <main className="relative mx-auto max-w-5xl px-4 py-8 sm:py-12 md:py-16 sm:px-6 lg:px-8">
         {/* Hero Section */}
-        <div className="mb-20 flex flex-col items-center text-center">
+        <div className="mb-12 sm:mb-16 md:mb-20 flex flex-col items-center text-center">
           {/* Logo with pearl glass effect */}
           <div 
-            className="group mb-12 transition-all duration-700 hover:scale-105"
+            className="group mb-6 sm:mb-8 md:mb-10 lg:mb-12 transition-all duration-700 hover:scale-105"
             style={{ animation: "fadeInUp 0.6s ease-out" }}
           >
             <div className="relative">
               {/* Outer glow ring */}
-              <div className="absolute -inset-4 animate-pulse rounded-full bg-gradient-to-r from-pink-300/20 via-purple-300/20 to-blue-300/20 blur-2xl"></div>
+              <div className="absolute -inset-3 sm:-inset-4 animate-pulse rounded-full bg-gradient-to-r from-pink-300/20 via-purple-300/20 to-blue-300/20 blur-xl sm:blur-2xl"></div>
               
               {/* Glass container */}
-              <div className="relative h-36 w-36 rounded-3xl border border-white/60 bg-gradient-to-br from-white/90 via-white/70 to-white/50 p-6 shadow-2xl shadow-purple-200/30 backdrop-blur-2xl">
+              <div className="relative h-24 w-24 sm:h-28 sm:w-28 md:h-32 md:w-32 lg:h-36 lg:w-36 rounded-2xl sm:rounded-3xl border border-white/60 bg-gradient-to-br from-white/90 via-white/70 to-white/50 p-4 sm:p-5 md:p-6 shadow-xl sm:shadow-2xl shadow-purple-200/30 backdrop-blur-2xl">
                 {/* Inner shine effect */}
-                <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-white/40 via-transparent to-transparent"></div>
-        <Image
+                <div className="absolute inset-0 rounded-2xl sm:rounded-3xl bg-gradient-to-br from-white/40 via-transparent to-transparent"></div>
+                <Image
                   src="/wayloomlogo.png"
                   alt="Wayloom.ai"
-                  width={120}
-                  height={120}
-                  className="relative z-10 drop-shadow-lg transition-transform duration-700 group-hover:scale-110 group-hover:rotate-2"
-          priority
+                  width={96}
+                  height={96}
+                  className="relative z-10 w-full h-full drop-shadow-lg transition-transform duration-700 group-hover:scale-110 group-hover:rotate-2"
+                  priority
                   style={{ mixBlendMode: 'multiply' }}
                 />
               </div>
@@ -159,7 +159,7 @@ export default function Home() {
 
           {/* Brand name with sophisticated gradient */}
           <h1 
-            className="mb-6 bg-gradient-to-r from-slate-800 via-purple-700 to-blue-700 bg-clip-text text-6xl font-bold tracking-tight text-transparent sm:text-7xl lg:text-8xl"
+            className="mb-4 sm:mb-5 md:mb-6 bg-gradient-to-r from-slate-800 via-purple-700 to-blue-700 bg-clip-text text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-tight text-transparent"
             style={{ animation: "fadeInUp 0.7s ease-out" }}
           >
             Wayloom.ai
@@ -167,64 +167,65 @@ export default function Home() {
 
           {/* Elegant status badge */}
           <div 
-            className="mb-8 group inline-flex items-center gap-3 rounded-full border border-purple-200/60 bg-gradient-to-r from-white/80 via-purple-50/50 to-white/80 px-6 py-3 shadow-lg shadow-purple-100/50 backdrop-blur-xl transition-all duration-300 hover:shadow-xl hover:shadow-purple-200/50"
+            className="mb-6 sm:mb-7 md:mb-8 group inline-flex items-center gap-2 sm:gap-3 rounded-full border border-purple-200/60 bg-gradient-to-r from-white/80 via-purple-50/50 to-white/80 px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 shadow-lg shadow-purple-100/50 backdrop-blur-xl transition-all duration-300 hover:shadow-xl hover:shadow-purple-200/50"
             style={{ animation: "fadeInUp 0.8s ease-out" }}
           >
-            <div className="relative flex h-2.5 w-2.5">
+            <div className="relative flex h-2 w-2 sm:h-2.5 sm:w-2.5">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-gradient-to-r from-pink-400 to-purple-400 opacity-75"></span>
-              <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-gradient-to-r from-pink-500 to-purple-500"></span>
+              <span className="relative inline-flex h-full w-full rounded-full bg-gradient-to-r from-pink-500 to-purple-500"></span>
             </div>
-            <span className="bg-gradient-to-r from-purple-700 to-pink-600 bg-clip-text text-sm font-bold tracking-wide text-transparent">
+            <span className="bg-gradient-to-r from-purple-700 to-pink-600 bg-clip-text text-xs sm:text-sm font-bold tracking-wide text-transparent">
               Actively Raising Seed Round
             </span>
           </div>
 
           {/* Value proposition */}
           <h2 
-            className="mb-5 max-w-3xl text-4xl font-bold leading-tight text-slate-900 sm:text-5xl"
+            className="mb-4 sm:mb-5 max-w-3xl px-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-[1.2] sm:leading-tight text-slate-900"
             style={{ animation: "fadeInUp 0.9s ease-out" }}
           >
-            AI-Powered Brain Health Monitoring
-            <br />
-            <span className="bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 bg-clip-text text-transparent">
+            <span className="block sm:inline">AI-Powered Brain Health</span>
+            <span className="block sm:inline"> Monitoring</span>
+            <br className="hidden sm:block" />
+            <span className="block sm:inline bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 bg-clip-text text-transparent">
               Accessible to Everyone
             </span>
           </h2>
 
           <p 
-            className="mb-12 max-w-2xl text-lg leading-relaxed text-slate-600"
+            className="mb-8 sm:mb-10 md:mb-12 max-w-2xl px-4 text-base sm:text-base md:text-lg leading-relaxed text-slate-600"
             style={{ animation: "fadeInUp 1s ease-out" }}
           >
             Clinical-grade cognitive screening through smartphones. Detect dementia years earlier with adaptive AI, continuous monitoring, and research-validated assessments.
           </p>
 
-          {/* Premium metrics grid */}
+          {/* Premium metrics grid - Mobile optimized */}
           <div 
-            className="mb-16 grid w-full grid-cols-3 gap-4 lg:gap-6"
+            className="mb-10 sm:mb-12 md:mb-16 grid w-full grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-4 md:gap-5 lg:gap-6"
             style={{ animation: "fadeInUp 1.1s ease-out" }}
           >
             {metrics.map((metric, index) => (
               <div
                 key={index}
-                className="group relative overflow-hidden rounded-3xl border border-white/60 bg-gradient-to-br from-white/90 via-white/60 to-white/40 p-6 shadow-xl shadow-slate-200/50 backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-purple-200/50"
+                className="group relative overflow-hidden rounded-2xl sm:rounded-3xl border border-white/60 bg-gradient-to-br from-white/90 via-white/60 to-white/40 p-5 sm:p-5 md:p-6 shadow-lg sm:shadow-xl shadow-slate-200/50 backdrop-blur-xl transition-all duration-500 hover:-translate-y-1 sm:hover:-translate-y-2 hover:shadow-xl sm:hover:shadow-2xl hover:shadow-purple-200/50"
               >
                 {/* Shimmer effect on hover */}
                 <div className="absolute inset-0 bg-gradient-to-br from-pink-100/0 via-purple-100/0 to-blue-100/0 opacity-0 transition-all duration-500 group-hover:from-pink-100/30 group-hover:via-purple-100/20 group-hover:to-blue-100/30 group-hover:opacity-100"></div>
                 
                 <div className="relative z-10">
-                  <div className="mb-2 bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-4xl font-bold text-transparent transition-transform duration-500 group-hover:scale-110">
+                  <div className="mb-2 sm:mb-2 bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-3xl sm:text-3xl md:text-4xl font-bold text-transparent transition-transform duration-500 group-hover:scale-110">
                     {metric.value}
                   </div>
-                  <div className="mb-1 text-sm font-bold text-slate-800">
+                  <div className="mb-1 sm:mb-1 text-sm sm:text-sm font-bold text-slate-800 leading-tight">
                     {metric.label}
                   </div>
-                  <div className="text-xs font-medium text-slate-500">
+                  <div className="text-xs sm:text-xs font-medium text-slate-500 leading-tight">
                     {metric.sublabel}
                   </div>
                 </div>
 
                 {/* Bottom accent line */}
-                <div className="absolute bottom-0 left-0 h-1 w-0 bg-gradient-to-r from-pink-400 via-purple-400 to-blue-400 transition-all duration-500 group-hover:w-full"></div>
+                <div className="absolute bottom-0 left-0 h-1 sm:h-1 w-0 bg-gradient-to-r from-pink-400 via-purple-400 to-blue-400 transition-all duration-500 group-hover:w-full"></div>
               </div>
             ))}
           </div>
@@ -245,14 +246,14 @@ export default function Home() {
                 {/* Iridescent shimmer on hover */}
                 <div className={`absolute inset-0 bg-gradient-to-r ${action.gradient} opacity-0 transition-all duration-500 group-hover:opacity-10`}></div>
 
-                <div className="flex items-center gap-4 sm:gap-5 md:gap-6 p-4 sm:p-6 md:p-8">
+                <div className="flex items-center gap-3 sm:gap-4 md:gap-5 lg:gap-6 p-4 sm:p-5 md:p-6 lg:p-8">
                   {/* Icon with pearl effect */}
                   <div className="relative flex-shrink-0">
                     {/* Glow effect */}
                     <div className={`absolute inset-0 rounded-xl sm:rounded-2xl bg-gradient-to-br ${action.gradient} blur-lg sm:blur-xl opacity-50 transition-all duration-500 group-hover:opacity-80 group-hover:blur-xl sm:group-hover:blur-2xl`}></div>
                     
                     {/* Glass icon container */}
-                    <div className={`relative flex h-14 w-14 sm:h-16 sm:w-16 md:h-20 md:w-20 items-center justify-center rounded-xl sm:rounded-2xl bg-gradient-to-br ${action.gradient} shadow-md sm:shadow-lg transition-all duration-500 group-hover:scale-110 group-hover:rotate-3`}>
+                    <div className={`relative flex h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 lg:h-20 lg:w-20 items-center justify-center rounded-xl sm:rounded-2xl bg-gradient-to-br ${action.gradient} shadow-md sm:shadow-lg transition-all duration-500 group-hover:scale-110 group-hover:rotate-3`}>
                       <div className="absolute inset-0 rounded-xl sm:rounded-2xl bg-gradient-to-br from-white/20 to-transparent"></div>
                       {action.icon}
                     </div>
@@ -260,10 +261,10 @@ export default function Home() {
 
                   {/* Content */}
                   <div className="flex-1 text-left min-w-0">
-                    <h3 className="mb-1 sm:mb-2 text-lg sm:text-xl md:text-2xl font-bold text-slate-900 transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-purple-700 group-hover:to-pink-600 group-hover:bg-clip-text group-hover:text-transparent leading-tight">
+                    <h3 className="mb-1 sm:mb-2 text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-slate-900 transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-purple-700 group-hover:to-pink-600 group-hover:bg-clip-text group-hover:text-transparent leading-tight">
                       {action.title}
                     </h3>
-                    <p className="text-sm sm:text-base font-medium text-slate-600 leading-snug pr-2">
+                    <p className="text-xs sm:text-sm md:text-base font-medium text-slate-600 leading-snug sm:pr-2">
                       {action.description}
                     </p>
                   </div>
@@ -520,16 +521,10 @@ export default function Home() {
                   </div>
 
                   {/* Footer actions - Mobile optimized */}
-                  <div className="flex items-center justify-between gap-3 border-t border-slate-200 bg-white p-4 sm:p-5">
-                    <a
-                      href="mailto:naimif@mail.gvsu.edu,belghouh@mail.gvsu.edu?subject=Investment Inquiry - Wayloom.ai"
-                      className="flex-1 sm:flex-none rounded-full border-2 border-purple-600 bg-white px-5 sm:px-8 py-2.5 sm:py-3 text-sm sm:text-base font-bold text-purple-600 text-center transition-all duration-300 hover:bg-purple-50"
-                    >
-                      Contact Us
-                    </a>
+                  <div className="flex items-center justify-center gap-3 border-t border-slate-200 bg-white p-4 sm:p-5">
                     <button
                       onClick={closeModal}
-                      className="flex-1 sm:flex-none rounded-full bg-slate-100 px-5 sm:px-8 py-2.5 sm:py-3 text-sm sm:text-base font-bold text-slate-700 transition-all duration-300 hover:bg-slate-200"
+                      className="w-full sm:w-auto rounded-full bg-gradient-to-r from-slate-700 to-slate-900 px-8 sm:px-12 py-3 sm:py-3.5 text-sm sm:text-base font-bold text-white transition-all duration-300 hover:scale-105 hover:shadow-xl"
                     >
                       Close
                     </button>
