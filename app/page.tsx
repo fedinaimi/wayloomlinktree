@@ -20,9 +20,8 @@ export default function Home() {
   // Key metrics - investor-ready stats
   const metrics = [
     { value: "7 min", label: "Screening Time", sublabel: "Per assessment" },
-    { value: "95%+", label: "Clinical Accuracy", sublabel: "Validated" },
-    { value: "$50B", label: "Market Size", sublabel: "TAM by 2030" },
-    { value: "Phase 2", label: "Development", sublabel: "MVP Ready" },
+    { value: "$31B", label: "USA Market", sublabel: "By 2030" },
+    { value: "2nd Phase", label: "Development", sublabel: "MVP Ready" },
   ];
 
   // Primary featured actions
@@ -201,7 +200,7 @@ export default function Home() {
 
           {/* Premium metrics grid */}
           <div 
-            className="mb-16 grid w-full grid-cols-2 gap-4 sm:grid-cols-4 lg:gap-6"
+            className="mb-16 grid w-full grid-cols-3 gap-4 lg:gap-6"
             style={{ animation: "fadeInUp 1.1s ease-out" }}
           >
             {metrics.map((metric, index) => (
@@ -471,26 +470,69 @@ export default function Home() {
               )}
 
               {activeModal === "deck" && (
-                <div className="relative w-full" style={{ height: '85vh' }}>
-                  {/* PDF Viewer */}
-                  <iframe
-                    src="/Pitch%20Deck%20(1).pdf"
-                    className="h-full w-full rounded-2xl"
-                    title="Wayloom.ai Investor Pitch Deck"
-                  ></iframe>
-                  
-                  {/* Download button overlay */}
-                  <div className="absolute bottom-6 right-6">
+                <div className="flex flex-col h-[80vh] sm:h-[85vh]">
+                  {/* Header with actions */}
+                  <div className="flex items-center justify-between gap-4 border-b border-slate-200 bg-gradient-to-r from-purple-50 via-white to-pink-50 p-4 sm:p-6">
+                    <div className="flex items-center gap-3 sm:gap-4">
+                      <div className="flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-xl bg-gradient-to-br from-purple-600 via-pink-600 to-blue-600 shadow-lg">
+                        <svg className="h-6 w-6 sm:h-7 sm:w-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                        </svg>
+                      </div>
+                      <div>
+                        <h3 className="text-lg sm:text-xl font-bold text-slate-900">
+                          Investor Pitch Deck
+                        </h3>
+                        <p className="text-xs sm:text-sm text-slate-600">
+                          Wayloom.ai — Brain Health Monitoring
+                        </p>
+                      </div>
+                    </div>
+                    
+                    {/* Download button */}
                     <a
-                      href="/Pitch%20Deck%20(1).pdf"
+                      href="/wayloompitchdeck.pdf"
                       download="Wayloom-Pitch-Deck.pdf"
-                      className="flex items-center gap-2 rounded-full bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 px-6 py-3 font-bold text-white shadow-xl shadow-purple-300/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-400/50"
+                      className="flex items-center gap-2 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 px-4 sm:px-6 py-2.5 sm:py-3 text-sm sm:text-base font-bold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-400/50"
                     >
-                      <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
+                      <svg className="h-4 w-4 sm:h-5 sm:w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
                       </svg>
-                      Download PDF
+                      <span className="hidden sm:inline">Download</span>
+                      <span className="sm:hidden">PDF</span>
                     </a>
+                  </div>
+
+                  {/* PDF Viewer */}
+                  <div className="relative flex-1 bg-slate-100">
+                    <iframe
+                      src="/wayloompitchdeck.pdf#toolbar=0"
+                      className="h-full w-full"
+                      title="Wayloom.ai Investor Pitch Deck"
+                    ></iframe>
+                    
+                    {/* Mobile hint */}
+                    <div className="absolute bottom-4 left-1/2 -translate-x-1/2 sm:hidden">
+                      <p className="rounded-full bg-slate-900/80 px-4 py-2 text-xs text-white backdrop-blur-sm">
+                        Swipe to navigate slides
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Footer actions - Mobile optimized */}
+                  <div className="flex items-center justify-between gap-3 border-t border-slate-200 bg-white p-4 sm:p-5">
+                    <a
+                      href="mailto:naimif@mail.gvsu.edu,belghouh@mail.gvsu.edu?subject=Investment Inquiry - Wayloom.ai"
+                      className="flex-1 sm:flex-none rounded-full border-2 border-purple-600 bg-white px-5 sm:px-8 py-2.5 sm:py-3 text-sm sm:text-base font-bold text-purple-600 text-center transition-all duration-300 hover:bg-purple-50"
+                    >
+                      Contact Us
+                    </a>
+                    <button
+                      onClick={closeModal}
+                      className="flex-1 sm:flex-none rounded-full bg-slate-100 px-5 sm:px-8 py-2.5 sm:py-3 text-sm sm:text-base font-bold text-slate-700 transition-all duration-300 hover:bg-slate-200"
+                    >
+                      Close
+                    </button>
                   </div>
                 </div>
               )}
