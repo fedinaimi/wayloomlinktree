@@ -39,19 +39,20 @@ export default function Home() {
         </svg>
       ),
     },
-    {
-      id: "deck",
-      title: "Investor Pitch Deck",
-      description: "Market opportunity, technology stack, financial projections, and team",
-      url: "#",
-      modalType: "deck",
-      gradient: "from-blue-400 via-cyan-400 to-teal-400",
-      icon: (
-        <svg className="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
-        </svg>
-      ),
-    },
+    // Investor Pitch Deck - Hidden for now
+    // {
+    //   id: "deck",
+    //   title: "Investor Pitch Deck",
+    //   description: "Market opportunity, technology stack, financial projections, and team",
+    //   url: "#",
+    //   modalType: "deck",
+    //   gradient: "from-blue-400 via-cyan-400 to-teal-400",
+    //   icon: (
+    //     <svg className="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
+    //       <path strokeLinecap="round" strokeLinejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+    //     </svg>
+    //   ),
+    // },
     {
       id: "website",
       title: "Explore Full Platform",
@@ -82,6 +83,13 @@ export default function Home() {
       image: "/team/image-removebg-preview (10).png",
       email: "belghouh@mail.gvsu.edu",
       linkedin: "https://www.linkedin.com/in/halèe-belghouthi/",
+    },
+    {
+      name: "Dr. Suhila Sawessi",
+      role: "Research Advisor & Mentor",
+      image: "/team/image-removebg-preview (11).png",
+      email: "sawesis@gvsu.edu",
+      linkedin: "https://www.linkedin.com/in/suhila-sawessi/",
     },
   ];
 
@@ -316,7 +324,7 @@ export default function Home() {
                 />
               </div>
               <p className="mt-3 sm:mt-4 text-center text-xs sm:text-sm font-bold text-slate-600">
-                DCIH Research Lab
+                College of Computing
               </p>
             </div>
           </div>
@@ -336,7 +344,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid gap-4 sm:gap-6 md:gap-8 sm:grid-cols-2">
+          <div className="grid gap-4 sm:gap-6 md:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 max-w-4xl mx-auto">
             {team.map((member, index) => (
               <div
                 key={member.name}
@@ -419,7 +427,7 @@ export default function Home() {
               <span className="hidden sm:inline">·</span>
               <span>Grand Valley State University</span>
               <span className="hidden sm:inline">·</span>
-              <span>DCIH Research Lab</span>
+              <span>College of Computing</span>
             </div>
             
             <div className="flex items-center gap-3 sm:gap-4">
