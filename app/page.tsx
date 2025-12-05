@@ -89,7 +89,7 @@ export default function Home() {
       role: "Research Advisor & Mentor",
       image: "/team/image-removebg-preview (11).png",
       email: "sawesis@gvsu.edu",
-      linkedin: "https://www.linkedin.com/in/suhila-sawessi/",
+      linkedin: "https://www.linkedin.com/in/s-sawesi-86376344/",
     },
   ];
 
